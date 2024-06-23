@@ -26,7 +26,7 @@ body {
 
 header {
     margin-top: 64px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,14 +36,14 @@ header {
 header h1 {
     font-size: 32px;
     color: #44546A;
-    margin-top: 16px;
+    margin-top: 40px;
 }
 
 .form {
     display: flex;
     gap: 16px;
-    margin-bottom: 32px;
-    width: 100%;
+    margin-bottom: 80px;
+    width: 70%;
 }
 
 .form input {
@@ -68,7 +68,7 @@ header h1 {
     filter: brightness(0.8);
 }
 .list {
-    width: 100%;
+    width: 70%;
     max-width: 720px;
     margin: 0 auto;
 }
@@ -76,8 +76,9 @@ header h1 {
 .list div {
     display: flex;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: px 0;
     margin-bottom: 32px;
+    font-size: 25px;
 }
 
 .list div button {
@@ -85,7 +86,9 @@ header h1 {
     border: 0;
     background: transparent;
     cursor: pointer;
+    font-size: 18px;
 }
+
 .list div button:hover {
     filter: brightness(0.8);
 }
@@ -99,6 +102,7 @@ header h1 {
     background: #fff;
     border-radius: 5px;
     color: #44546A;
+    margin-bottom: 20px;
 }
 
 .news {

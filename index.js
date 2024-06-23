@@ -1,32 +1,40 @@
+function carregarInteresses() {
+    const listaInteresses = document.querySelector("#listaInteresses");
+    listaInteresses.innerHTML = "";
 
-const adicionarInteresse = document.querySelector("input")
-const listaInteresses  = document.querySelector("ul")
+    const listaStorage = JSON.parse(localStorage.getItem('meus-interesses')) || [];
 
-const botaoAdicionar = document.querySelector(".button-add")
+    listaStorage.forEach(interesse => {
+        const inputLi = document.createElement('li');
+        inputLi.textContent = interesse;  
+        listaInteresses.appendChild(inputLi);
+    });
+}
 
-botaoAdicionar.addEventListener("click", () => {
-    const value = adicionarInteresse.value
-    if (value === "") {
-        alert("Por favor insira um interesse ou hobbie")
-        return;
+function adicionarInteresse() {
+    const adicionarInteresse = document.querySelector("input");
+    const novoInteresse = adicionarInteresse.value;
+
+    if (novoInteresse) {
+        const listaStorage = JSON.parse(localStorage.getItem('meus-interesses')) || [];
+        listaStorage.push(novoInteresse);
+        localStorage.setItem('meus-interesses', JSON.stringify(listaStorage));
+
+        adicionarInteresse.value = "";
+        carregarInteresses();
+    } else if(novoInteresse!= ""){
+        alert("Por favor insira um interesse ou hobbie");
     }
+}
 
-    const novoInteresse = document.createElement("li");
-    novoInteresse.textContent = value;
+function limparInteresses() {
+    localStorage.removeItem('meus-interesses');
+    carregarInteresses();
+}
 
-    listaInteresses.appendChild(novoInteresse);
+document.querySelector(".button-add").addEventListener('click', adicionarInteresse);
+document.querySelector('.button-clear').addEventListener('click', limparInteresses);
 
-    adicionarInteresse.value = "";
-})
-
-
-
-
-
+setInterval(carregarInteresses, 1000)
 
 
-
-/* <div>
-    <strong>Lista:</strong>
-    <button class="button-clear">Limpar lista</button>
-</div> */

@@ -1,34 +1,30 @@
 function carregarInteresses() {
-    const listaInteresses  = document.querySelector("#listaInteresses")
-    
-    listaInteresses.HTML = "";
-    
-    const interesses = JSON.parse(localStorage.getItem("meus-interesses") || [])
-    interesses.forEach(interesse => {
-        const novoInteresse = document.createElement("li");
-        novoInteresse.innerHTML = interesse;
-        listaInteresses.appendChild(novoInteresse)
-    })
+    const listaInteresses = document.querySelector("#listaInteresses");
+    listaInteresses.innerHTML = "";
+
+    const listaStorage = JSON.parse(localStorage.getItem('meus-interesses')) || [];
+
+    listaStorage.forEach(interesse => {
+        const inputLi = document.createElement('li');
+        inputLi.textContent = interesse;  
+        listaInteresses.appendChild(inputLi);
+    });
 }
 
-function adicionarInteresse () {
-    const adicionarInteresse = document.querySelector("input")
-    const interesse= adicionarInteresse.value
-    if (interesse === "") {
-        alert("Por favor insira um interesse ou hobbie")
-        return;
+function adicionarInteresse() {
+    const adicionarInteresse = document.querySelector("input");
+    const novoInteresse = adicionarInteresse.value;
+
+    if (novoInteresse) {
+        const listaStorage = JSON.parse(localStorage.getItem('meus-interesses')) || [];
+        listaStorage.push(novoInteresse);
+        localStorage.setItem('meus-interesses', JSON.stringify(listaStorage));
+
+        adicionarInteresse.value = "";
+        carregarInteresses();
+    } else if(novoInteresse!= ""){
+        alert("Por favor insira um interesse ou hobbie");
     }
-    const interesses = JSON.parse(localStorage.getItem('meus-interesses')) || [];
-    interesses.push(interesse);
-    localStorage.setItem('meus-interesses', JSON.stringify(interesses));
-
-    const novoInteresse = document.createElement('li');
-    novoInteresse.textContent = interesse;
-
-    const listaInteresses = document.getElementById('lista-interesses');
-    listaInteresses.appendChild(novoInteresse);
-
-    input.value = "";
 }
 
 function limparInteresses() {
@@ -36,9 +32,9 @@ function limparInteresses() {
     carregarInteresses();
 }
 
-
-document.querySelector(".button-add").addEventListener('click', adicionarInteresse)
+document.querySelector(".button-add").addEventListener('click', adicionarInteresse);
 document.querySelector('.button-clear').addEventListener('click', limparInteresses);
 
 setInterval(carregarInteresses, 1000)
+
 

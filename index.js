@@ -52,3 +52,36 @@ document.querySelector('.button-clear').addEventListener('click', limparInteress
 setInterval(carregarInteresses, 1000)
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const tituloNoticiaPrincipal = document.querySelector('.news p');
+
+    (async () => {
+        try {
+            const resposta = await fetch('https://servicodados.ibge.gov.br/api/v3/noticias/?destaque=0');
+            const data = await resposta.json();
+
+            const noticiaPrincipal = data.items[0];
+
+            if (noticiaPrincipal && tituloNoticiaPrincipal) {
+                tituloNoticiaPrincipal.innerHTML = noticiaPrincipal.titulo;
+            }
+        } catch (error) {
+            console.error('Erro ao buscar notícias:', error);
+        }
+    })();
+});
+
+        //Outra forma com function
+        
+// async function news() {
+//     const response = await fetch('https://servicodados.ibge.gov.br/api/v3/noticias/?tipo=release')
+//     const data = await response.json()
+
+//     const tituloNews = data.items[0]
+
+//     if(tituloNews) {
+//         const noticiaNews = document.getElementById('title-news-today')
+//         noticiaNews.innerHTML = tituloNews.titulo
+//     }
+// }
+// news()

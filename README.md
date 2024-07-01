@@ -10,7 +10,7 @@ Neste mini projeto, iremos criar uma página que possamos adicionar nossos inter
 ## 📉 Diagrama relacional
 
 <p>
-  <img src = "./assets/miniProjetoListaInteresse.png">
+  <img src = "./assets/miniProjetoListaInteresses.png">
 </p>
 
 

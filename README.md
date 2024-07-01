@@ -6,13 +6,7 @@
 
 Neste mini projeto, iremos criar uma página que possamos adicionar nossos interesses e hobbies, sendo possível armazenar os dados para ter acesso a qualquer momento. Ele consistirá em escrever e adicionar o interesse. Aqui teremos uma seção de notícias de destaque do dia, parecido como um “card” de anuncio patrocinado.
 
-
-## 📉 Diagrama relacional
-
-<p>
-  <img src = "./assets/miniProjetoListaInteresses.png">
-</p>
-
+## Sobre o código
 
 - Declaração de Função: Define três funções principais (carregarInteresses, adicionarInteresse, limparInteresses) para manipular a lista de interesses.
 - Manipulação do DOM: Seleciona elementos do DOM e altera seu conteúdo (como limpar a lista de interesses e adicionar novos itens).
@@ -20,6 +14,13 @@ Neste mini projeto, iremos criar uma página que possamos adicionar nossos inter
 - Event Listeners: Define ações a serem realizadas quando os botões são clicados.
 - Atualização Dinâmica da Interface do Usuário: Garante que a lista de interesses seja exibida corretamente na interface do usuário, refletindo as alterações feitas.
 - Requisição assíncrona para a API do IBGE para obter notícias. Quando a resposta é recebida, ele seleciona a primeira notícia da lista e a insere no elemento p dentro do contêiner .news no DOM, desde que esses elementos existam. O código também lida com possíveis erros durante a requisição e processamento da resposta, exibindo uma mensagem de erro no console se algo der errado.
+
+## 📉 Diagrama relacional
+
+<p>
+  <img src = "./assets/miniProjetoListaInteresses.png">
+</p>
+
 
 ## Melhorias
 - Adicionar interesses pela tecla ENTER (método keydown)

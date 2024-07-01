@@ -26,7 +26,7 @@ function adicionarInteresse() {
             carregarInteresses();
         } else {
             alert("Este interesse /hobbie ja foi adicionado. Por favor, digite um novo interesse ou hobbie.")
-            adicionarInteresse.focus(); // Retorna o cursor para o campo de entrada
+            adicionarInteresse.focus(); 
         }
     } else {
         alert("Por favor insira um interesse ou hobbie");
@@ -40,7 +40,6 @@ function limparInteresses() {
 
 document.querySelector(".button-add").addEventListener('click', adicionarInteresse);
 
-// Adiciona o evento de tecla Enter no campo de entrada
 document.querySelector("input").addEventListener('keydown', function(event) {
     if (event.key === "Enter") {
         adicionarInteresse();

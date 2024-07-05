@@ -28,7 +28,6 @@ Neste mini projeto, iremos criar uma página que possamos adicionar nossos inter
 - Verifica se já tem o interesse na lista para não repetir (método .icludes)
 - Gostaria de ter colocado .mathRandow para buscar e alterar as notícias patrocinadas tornando-as mais dinâmicas
 
-
 ## 🛠️ Construído com
 
 - Trello - aprendendo a criar e mover cards.
@@ -36,19 +35,16 @@ Neste mini projeto, iremos criar uma página que possamos adicionar nossos inter
 - GitHub - aprendendo a utilizar sempre enviando ou trazendo para meu local o repositório, fazendo alterações...
 - HTML e CSS
 - Manipulação do DOM
-- Javascript
-  
+- Javascript  
 
 ## 🧑🏻‍🏫 Professores
 
 * **Nicholas Macedo** - [GitHub](https://github.com/nicholasmacedoo)
 * **Yan Esteves** - [GitHub](https://github.com/yanestevesufjf)
-* 
 
 ## Video de apresentação do MiniProjeto 2
 
 [Video] - (https://drive.google.com/file/d/1u23WEWGNoEiXMYEhZLQJHgfcofG6qicc/view?usp=drive_link)
-
 
 ## 🎁 Expressões de gratidão
 

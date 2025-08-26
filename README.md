@@ -15,7 +15,7 @@ Neste mini projeto, iremos criar uma página que possamos adicionar nossos inter
 - Atualização Dinâmica da Interface do Usuário: Garante que a lista de interesses seja exibida corretamente na interface do usuário, refletindo as alterações feitas.
 - Requisição assíncrona para a API do IBGE para obter notícias. Quando a resposta é recebida, ele seleciona a primeira notícia da lista e a insere no elemento p dentro do contêiner .news no DOM, desde que esses elementos existam. O código também lida com possíveis erros durante a requisição e processamento da resposta, exibindo uma mensagem de erro no console se algo der errado.
 
-## 📉 Diagrama relacional
+## 📉 Projeto pronto
 
 <p>
   <img src = "./assets/miniProjetoListaInteresses.png">
